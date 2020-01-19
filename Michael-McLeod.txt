@@ -1,0 +1,141 @@
+Codepen: https://codepen.io/Trabin/pen/eYmLXPq
+
+  1. What is Semantic HTML? HTML that defines meaning.
+    2. What is HTML used for? To create electronic documents viewable on the world wide web.
+    3. What is an attribute and where do we put it? 
+    Attributes provide additional information about and element and can be used on all HTML Elements
+    4. What is the h1 tag used for? How many times should I use it on a page?
+      h1 is header 1, and is usually only displayed once, however new original
+       content may have a new h1.
+    5. Name two tags that have required attributes
+    img and href
+    6. What do we put in the head of our HTML document? 
+    at the beginning of the page
+    7. What is an id? an ID is a unique selector meant for JavaScript to find or css to style.
+    8. What elements can I add an id to? All html elements can have an ID.
+    9. How many times can I use the same id on a page? Once. 
+    10. What is a class? an attribute that can be put on one or more html element, and is a 
+    target for CSS and JavaScript.
+    11. What elements can I add a class to? In HTML 5, All HTML Elements.
+    12. How many times can I use the same class on a page? As many as you want.
+    13. How do I get my link to open in a new tab? target= "_blank" within the anchor.
+    14. What is the alt attribute used for? 
+      alt is used as alternate text when an image can't be viewed.
+    15. How do I reference an id? #id
+    16. What is the difference between a section and a div 
+    Sections break things apart, Divs also section off (Division) 
+    but can be controlled for block-elements for formatting.
+    17. What is CSS used for? 
+      Mostly presentation of a webpage. 
+      Things like font style, alternative styles, colors, layouts
+    18. How to we select an element? Example - every h2 on the page
+    h2 {
+      
+    }
+    19. What is the difference between a class and an id? - Give me an example of when I might use each one
+      An ID is unique, and can only be used once in a sheet.
+      #waffles {
+        color:blue;
+      }
+      Something like the Main Header would be a good one, or something you want to stand out
+      from the rest of the page. Or when a class is associated with an element, or an entire
+      element is styled out, and you want it to be at the top of the list instead of being 
+      overwritten by that style.
+
+      However a class can be used on multiple tags to change all the elements it's attached to.
+
+      .copper
+      {
+        color: copper;
+      }
+
+    20. How do we select classes in CSS? .class
+    21. How do we select a p element with a single class of “human””? p .human
+    22. What is a parent child selector? When would this be useful? 
+    Nesting and inheritance. This is when you want to change something that is associated
+    with a main class. The main class has the primary attributes, but you want something
+    else to happen to certain nested attributes within that class, like having a paragraph
+    with a different color. You would then select the main class and then subclass to change
+    the attributes.
+        
+    23. How do you select all links within a div with the class of sidebar?
+      #sidebar a:link { }
+      descendent selectors
+    24. What is a pseudo selector? pseudo-class that is a keyword for specific actions or states
+    25. What do we use the change the spacing between lines? line-spacing: 2px; as an example
+    26. What do we use to change the spacing between letters? letter-spacing: 2px; an example
+    27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+    text-transform: uppercase;
+    text-transform: lowercase;
+    text-transform: capitalize;
+
+    28. How do I add a 1px border around my div that is dotted and black?
+    div {
+      border: dotted black 1px;
+    }
+    29. How do I select everything on the page? * as a selector selects all elements.
+    This can also be used inside a container element, such as Div, to select all inline elements
+    of that container.
+    30. How do I write a comment in CSS? // followed by a comment
+    31. How do I find out what file I am in, when I am using the command line? pwd
+    which stands for print working directory.
+    32. Using the command line - how do I see a list of files/folders in my current folder? ls
+    33. How do I remove a file via the command line? Why do I have to be careful with this? 
+    rm for Remove. This removes completely, no ability to pull the file back.
+    There is no Trash Can.
+    34. Why should I use version control? 
+    To track changes, to track who made changes, to track types of changes, to go back to 
+    when no changes or some changes have been made, to test what works and what doesn't.
+    35. How often should I commit to github?
+    Every time you make a change, up to you if it's a small change or a large one.
+    36. What is the command we would use to push our repo up to github? 
+    git push <remote) <branch>, Git add, or git commit.
+    37. Walk me through Lambda's git flow. 
+
+Fork Repo.
+Clone Repo through Bash (copy location url).
+Branch to repo.
+Add TL as collaborator.
+make changes relative to the project.
+Add/commit changes to repo making comment on type of change, what changes were made.
+Test branch against master through pull request.
+Submit pull request with TL as reviewer.
+TL will merge branch to master after full review.
+
+
+Stretch Questions
+
+    1. What is the difference between an inline element and a block element?
+    You can't put block elements within an inline element.
+    Inline are elements that only occupy space within tags.
+    Block elements are overcompasing elements like a section or the entire page.
+
+    2. What happens when an element is positioned absolutely? 
+    Position is set to that absolute position no matter what, including if the page resolution
+    has changed, relative to the edges of the containing block.
+
+    3. How do I make an element take up only the amount of
+     space it needs but also have the ability to give it a width? 
+        Box Model. You would set the padding, Margin, border, Width of the container.
+        Imagine it being a rectangle. Your content has it's own space needed.
+        You can set the Height and Width of the container of content itself.
+        Then you have internal Padding. This sets how much from the content the inner space 
+        your content is surrounded with.
+        Then there's the Border.
+        And then the Margin, which sets how much space from the border the rest of the content
+        of the page or other content can be close to your container.
+
+    4. Name 3 elements that are diplay block by default, 2 elements 
+    that are display inline by default and 1 element that is display inline-block by default
+    <Span> = Inline by default.
+    <img> = inline by default.
+    <button> = inline-block by default.
+
+    5. In your own words, explain the box model. What is the fix for the box model? 
+        Box Model definition can be found in Question 3.
+        However, the Box model can break depending on Resulution and doesn't bend well.
+        Border box will apply a natural box layout to all elements within.
+        border-sizing: box-border { width, margin, etc}
+
+        There are still things that will break, 
+        but you can set the margin and width to a percent easier.
